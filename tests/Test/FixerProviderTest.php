@@ -72,7 +72,10 @@ final class FixerProviderTest extends TestCase
         $provider = FixerProvider::create(new Nexus80());
         $configured = $provider->configured();
         $builtin = $provider->builtin();
-        $enabled = array_filter((new Nexus80())->getRules());
+        $enabled = array_filter(
+            (new Nexus80())->getRules(),
+            static fn(mixed $value): bool => false !== $value,
+        );
 
         self::assertCount(\count($builtin), $configured);
         self::assertLessThan(\count($configured), \count($enabled));
