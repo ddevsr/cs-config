@@ -385,6 +385,7 @@ final class Nexus80 extends AbstractRuleset
                 'null_adjustment' => 'always_first',
                 'case_sensitive' => false,
             ],
+            'php_unit_attributes' => true,
             'php_unit_construct' => [
                 'assertions' => [
                     'assertEquals',
