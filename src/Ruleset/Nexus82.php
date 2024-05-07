@@ -348,6 +348,7 @@ final class Nexus82 extends AbstractRuleset
             'object_operator_without_whitespace' => true,
             'octal_notation' => true,
             'operator_linebreak' => ['only_booleans' => true, 'position' => 'beginning'],
+            'ordered_attributes' => ['order' => [], 'sort_algorithm' => 'alpha'],
             'ordered_class_elements' => [
                 'order' => [
                     'use_trait',
